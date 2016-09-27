@@ -1,0 +1,23 @@
+function model_alcohol()
+clf;
+hold on;
+B_init = 0;
+a = 1.5;
+K = .5;
+V = .8;
+stocks = graph_alcohol(B_init,a,K,V);
+Times = stocks(:,1);
+S_conc = stocks(:,2);
+B_conc = stocks(:,3);
+total_conc = S_conc + B_conc;
+plot(Times,total_conc);
+xlabel('Time (hrs)');
+ylabel('Concentration of alcohol in the body (g/l)');
+title('Concentration of alcohol vs. time');
+end
+
+
+
+
+
+
